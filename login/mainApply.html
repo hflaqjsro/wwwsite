@@ -1,0 +1,368 @@
+<!DOCTYPE HMTL>
+<html>
+    <head lang="ko">
+        <meta charset="utf-8">
+        <title>WWW.MAIN</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        <style>
+            * {margin: 0px; padding : 0px; box-sizing: border-box;}
+            .wrap{width : 1260px; margin: 0 auto;}
+            li {list-style: none;}
+            button {background: none; border: none;}
+            a {text-decoration: none; color : #000000;}
+            
+            header {width : 1519px; height:73px;position: relative;}
+            header .wrap{position: relative;}
+            header h1 .main-logo {padding: 20px 25px; color: #2E6FAB;}
+            header h2 a {color: #363E56; position: absolute; top : 20px; left: 80px;}
+            header select {position: absolute; top : 30px; left: 80px;}
+            header ul {position: absolute; top : 25px; right: 30px;}
+            header ul li {
+                float: left;
+                padding: 0px 10px;
+                position: relative;
+            }
+            header ul li::after {
+                content: "|";
+                position: absolute;
+                top : -2px;
+                right : -3px;
+            }
+            header ul li:last-child::after{
+                content: none;
+            }
+            
+            nav {width : 1519px; height:50px; background: #2E6FAB; color: #ffffff; font-weight: bold;
+            position: relative;}
+            nav .wrap {position: relative;}
+            nav a {color: #ffffff;}
+            nav ul:last-child {float : right; } 
+            nav ul li {padding: 13px 10px; float: left;}
+            nav ul li button i {margin: 0px 20px; color: #ffffff;}
+            
+            nav .Main-Search {
+                width: 300px;
+                height: 30px;
+                position: absolute;
+                right: 100px;
+                top : 10px;
+                background-color: #ffffff;
+                border: 1px solid #ffffff;
+                border-radius: 25px;
+            }
+            nav .Main-Search input[type=text] {
+                width: 230px;
+                margin-left: 15px;
+                border: none;
+            }
+            nav .Main-Search input[type=submit] {
+                padding: 2px;
+                border-radius: 25px;
+                background-color : #F1F4F8;
+                
+                border: none;
+            }
+            nav ul .search_nav {
+                padding: 0PX;
+                padding-top: 8px;
+            }
+            nav ul li input[type=button] {
+                margin: 0px;
+                padding: 5px;
+                border-radius: 15px;
+                background-color : #ffffff;
+                border: 3px solid #F1F4F8;
+            }
+            
+            section {width: 1519px; background-color: #F1F4F8; padding: 30px; overflow: hidden;}
+            .innav {
+				display:flex; align-items:center; list-style:none; 
+				margin:0 auto;
+				justify-content:center; height:50px;
+				margin-top: 30px;  text-align:center;
+			}
+			.innav li {
+				color:#2E6FAB;
+				border:1px solid #2E6FAB;
+				width:200px; height:100%;
+			}
+			.innav a {
+				display:inline-block;
+				width:200px; height:100%;
+				align-items:center; 		
+			}
+			.innav a:hover{
+				color:#2E6FAB;
+				background-color:white;
+				border-right : 1px solid #2E6FAB;
+			}
+			section .wrap a{
+				background-color : #2E6FAB;
+				color : white;
+				border : 1px solid #ffffff;;
+			}
+			
+			section .wrap table input[type=button]{
+				width:75px; height:25px;
+				border:1px solid gray;
+				background-color:white;
+				padding:1px;
+				margin : 3px;
+			}
+			input[type=button]:hover{
+				cursor:pointer;
+			}
+			
+			img {
+				width : 265px;
+				height : 100px;
+			}
+			#buttonWrap input[type=button]:first-child{
+				width: 100px; height:35px;
+				border:1px solid skyblue;
+				background-color:skyblue;
+				color:white;
+				padding:1px;
+			}
+			#buttonWrap input[type=button]:last-child{
+				width: 100px; height:35px;
+				border:1px solid gray;
+				background-color:white;
+				padding:1px;
+			}
+			#tab01 {
+				margin : 0 auto;
+				width : 90%;
+				height : 300px;
+				border:1px solid gray;
+				border-top:3px solid gray;
+				border-collapse : collapse;
+				text-align:left; 
+			}
+			#tab01 td:first-child{
+				border-bottom:1px solid gray;
+			}
+			
+			#tab01 td:last-child{
+				border-left:1px solid gray;
+				width:300px;
+			}
+			td {
+				padding:10px;
+				margin-top:5px;
+			} 
+			#tab01 i{
+				color:orange; font-size:50px; margin:0 auto;  
+			}
+		    #inTab01, #inTab02{
+		    	width : 400px;
+		    	height : 100px;
+		    	background-color : #F1F4F8; 
+		    	margin-left : 0px;
+		    	border : none;
+		    	padding : 5px;
+		    	font-size : 13px;
+		    }     
+		    #inTab01 td:first-child{
+		    	width: 50px;
+		    	border : none;
+		    	color : gray;
+		    	font-weight : bold;
+		    	font-size : 13px;
+		    }
+		  
+		    #inTab02 td:first-child{
+		    	width: 100px;
+		    	border : none;
+		    	color : gray;
+		    	font-weight : bold;
+		    }
+		    #inTab03 {
+		    	font-size : 13px;
+		    }
+		    #inTab03 td:first-child{
+		    	width : 160px;
+		    	border : none;
+		    	color : gray;
+		    	font-weight : bold;
+		    }
+		    .CLICKED{
+		    	background-color : "white";
+		    	color : "#2E6FAB";
+		    }
+            footer{
+                height: 150px;
+            }
+            footer p {
+                text-align: center;
+                padding: 25px;
+            }
+            
+        </style>
+        <script>
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="wrap">
+                <h1>
+                    <i class="main-logo fab fa-wordpress-simple"></i>
+                </h1>
+                <h2>
+                    <a href="../Main.html">We Will Work</a>
+                </h2>
+                <!--
+                <select>
+                    <option>채용정보</option>
+                    <option>기업정보</option>
+                    <option>인재검색</option>
+                    <option>검증면접</option>
+                    <option>합격</option>
+                </select>
+                -->
+                <ul>
+                    <li><a href="../login/mainlogin.html">로그인</a></li>
+                    <li><a href="../login/mainjoin.html">회원가입</a></li>
+                </ul>
+            </div>
+        </header>
+        <nav>
+            <div class="wrap">
+                <ul>
+                    <li>
+                        <button>
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </li>
+                    <li><a href="#">채용하기</a></li>
+                    <li><a href="#">공고상세</a></li>
+                    <li><a href="../communitiy/communityMain.html">커뮤니티</a></li>
+                </ul>
+                <div class="Main-Search">
+                    <input type="text">
+                    <input type="submit" value="검색">
+                </div>
+                 <ul>
+                    <li class="search_nav"> 
+                        <input type="button" value="상세검색" onclick="location.href='../companyinfo_search/DetailSearch.html'" style="cursor:pointer">
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- 공통 헤더 및 네비 여기까지 -->
+        
+        <section>
+            <div class="wrap">
+                <table id="tab01" align="center">
+					<tr><td colspan="2">
+						<span>(주)호텔신라</span><input id="like" type="button" value="관심기업">
+						<br>
+						<h2>(주)호텔신라 VANTT 라운지 식음 판매 모집</h2>
+						</td>	
+						<td><img src="shilla.png"></img></td>
+					</tr>	
+					<tr><td>
+						<h5>지원자격</h5>
+						<table id="inTab01">
+							<tr><td>경력</td><td>경력(1년 이상)</td></tr>
+							<tr><td>학력</td><td>학력무관</td></tr>
+							<tr><td>우대</td><td>인근 거주자</td></tr>
+						</table>
+						</td>
+						<td>
+						<h5>근무조건</h5>
+						<table id="inTab02">
+							<tr><td>고용형태</td><td>계약직</td></tr>
+							<tr><td>급여</td><td>회사내규에 따름</td></tr>
+							<tr><td>지역</td><td>서울시 강남구</td></tr>
+						</table>
+						</td>
+						<td>><h5>기업정보</h5>
+						<table id="inTab03">
+							<tr><td>산업(업종)</td><td>호텔.여행</td></tr>
+							<tr><td>사원수</td><td>2,293명</td></tr>
+							<tr><td>설립년도</td><td>1973년</td></tr>
+							<tr><td>기업형태</td><td>대기업</td></tr>
+						</table>
+						<input type="button" name="comInfo" value="기업정보" onclick="location.href='../companyinfo_search/CompanyInfo.html'">
+						<input type="button" name="openRecruit" value="채용중 공고"></td>
+					</tr>		
+				</table>
+				<Br>
+				<div id="buttonWrap" align="center">
+					<input type="button" name="applyNowBtn" value="즉시지원">
+					<input type="button" name="scrap" value="스크랩">
+				</div>	
+				<br>
+				<ul class="innav">
+					<li><a href="poster.html" target="mainFrame" class="menu">상세요강</a></li>
+					<li><a href="term.html" target="mainFrame" class="menu">접수기간</a></li>
+					<li><a href="statistics.html" target="mainFrame" class="menu">지원자 통계</a></li>
+				</ul>
+				<div id="#main" align="center">
+					<iframe name="mainFrame" src="poster.html" width="80%" height="700"></iframe>
+				</div>
+            </div>
+        </section>
+        
+        
+        <!-- 공통푸터 -->
+        <footer>
+            <div class="wrap">
+                <p>We Will Work 고객센터 : 02-000-0000</p>
+            </div>
+        </footer>
+        
+    </body>
+    <script>
+        function post_scrap(){
+            this.value = "스크랩 완료";
+        }
+        var applyNowBtn = document.querySelector("[name=applyNowBtn]");
+    	applyNowBtn.onclick = function(){
+    		var win = window.open("apply.html","PopupWin","width=300","height=600");
+    	}
+    	
+    	var likeCom = document.querySelector("#tab01 input[type=button]");
+    	var num = 0;
+    	likeCom.onclick=function(){
+    		if(num==0){
+    			this.style.backgroundColor="gray";
+        		this.style.color="white";
+        		num++;
+    		} else{
+    			this.style.backgroundColor="white";
+    			this.style.color="black";
+    			num--;
+    		}	
+    	}
+    	var scrap = document.querySelector("[name=scrap]");
+    	var num2 = 0;
+    	scrap.onclick=function(){
+    		if(num2==0){
+    			this.style.backgroundColor="gray";
+        		this.style.color="white";
+        		
+        		
+        		num2++;
+    		} else{
+    			this.style.backgroundColor="white";
+    			this.style.color="black";
+    			num2--;
+    		}
+    	}
+    	var menu = document.querySelector(".menu");
+    	var current;
+    	
+    	
+    	function clickHandler(obj){
+    		if(current){
+    			current.classList.remove("menu-active");
+    		}
+    		obj.target.classList.add("menu-active");
+    		current = obj.target;
+    	}
+    	
+    	menu.addEventListener("click", clickHandler);
+    </script>
+</html>

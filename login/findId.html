@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	html, body { margin : 0px ; padding : 10px;}
+	
+	h2{
+		color : #2E6FAB;
+	}
+	.tab{
+		width : 500px;
+		height : 350px;
+	}
+	.tab01 {
+		width : 500px;
+		height : 140px;
+		border-collapse : collapse;
+		border: none;
+	}
+	.tab01 th{
+		width : 80px;
+		height : 70px;
+		background-color : #2E6FAB;
+		color : white;
+	}
+	.tab01 input{
+		width : 420px;
+		height : 70px;
+		border : none;
+	}
+	.inputSec{
+		width : 100px;
+		margin : 0 auto;
+		margin-top : 20px;
+	}
+	input[name=findIdBtn] {
+		width : 100px;
+		height : 50px;
+		background-color : #2E6FAB;
+		color : white;
+		border : none;
+	}
+	input[name=findIdBtn] {
+		cursor : pointer;
+	}
+</style>
+</head>
+<body>
+    <div class="tab">
+        <h2>아이디 찾기</h2>
+        <table class="tab01" border>
+        <tr><th>이름</th><td><input type="text" name="fname"></td></tr>
+        <tr><th>이메일</th><td><input type="text" name="fmail"></td></tr>
+        </table>
+        <div class="inputSec"><input type="button" value="아이디 찾기" name="findIdBtn"></div>
+    </div>                         
+</body>
+<script type="text/javascript">
+	var nameVal = document.querySelector("[name=fname]");
+	var mailVal = document.querySelector("[name=fmail]");
+	
+	var btn = document.querySelector("input[type=button]");
+	var idDB = "stronghaji";
+	var nameDB = "강하지";
+	var mailDB = "stronghaji@naver.com";
+	btn.onclick=function(){
+		if(nameVal.value==nameDB && mailVal.value==mailDB){
+			var win = window.open("","new win","width=400, height=200");
+			win.document.write("<html><body><h3>회원님의 아이디는 "+idDB+" 입니다.</h3></body></html>");
+		} else if(nameVal.value=="" || mailVal.value==""){
+			alert("값을 입력하세요");
+			nameVal.focus();
+		}else{
+			var win = window.open("","new win","width=400, height=200");
+			win.document.write("<html><body><h3>정보가 없습니다.</h3></body></html>");
+		}
+	}
+
+</script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	html, body { margin : 0px ; padding : 10px;}
+	
+	h2{
+		color : #2E6FAB;
+	}
+	.tab{
+		width : 500px;
+		height : 350px;
+	}
+	.tab01 {
+		width : 500px;
+		height : 140px;
+		border-collapse : collapse;
+		border : none;
+	}
+	.tab01 th{
+		width : 80px;
+		height : 70px;
+		background-color : #2E6FAB;
+		color : white;
+	}
+	.tab01 input{
+		width : 420px;
+		height : 70px;
+		border : none;
+	}
+	.inputSec{
+		width : 100px;
+		margin : 0 auto;
+		margin-top : 20px;
+	}
+	input[name=findPwBtn] {
+		width : 100px;
+		height : 50px;
+		background-color : #2E6FAB;
+		color : white;
+		border : none;
+	}
+	input[name=findPwBtn] {
+		cursor : pointer;
+	}
+</style>
+</head>
+<body>
+    <div class="tab">
+        <h2>비밀번호 찾기</h2>
+        <table class="tab01" border>
+        <tr><th>이름</th><td><input type="text" name="fname"></td></tr>
+        <tr><th>아이디</th><td><input type="text" name="fId"></td></tr>
+        <tr><th>이메일</th><td><input type="text" name="fmail"></td></tr>
+        </table>
+        <div class="inputSec"><input type="button" value="비밀번호 찾기" name="findPwBtn"></div>
+    </div>                         
+</body>
+</html>

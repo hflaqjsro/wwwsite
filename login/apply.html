@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	html, body {margin:0px; padding:0px; height:100%;}
+	.top {
+		width:100%; 
+		height:30%;
+		margin : 0px;
+		background-color : #2E6FAB; 
+		color : white;
+		padding : 5px 10px;
+	}
+	
+	.bottom {
+		width:100%; 
+		height:70%; 
+		background-color:whitesmoke;
+		padding : 5px 10px;
+	}
+	select {
+		width : 200px;
+		height : 50px;
+	}
+	option {
+		padding : 0px;
+		margin : 0px;
+		width : 200px;
+		height : 50px;
+		font-size : 15px;
+	}
+	input[type=button]{
+		width : 80px;
+		height : 50px;
+		background-color : #2E6FAB;
+		color : white;
+		border : none;
+		font-size : 15px;
+	}
+	input[type=button]:hover{
+		cursor : pointer; 
+	}
+</style>
+</head>
+<body>
+	<form action="received.jsp" name="applyForm">
+		<div class="top"> 
+			<h3>(주)호텔신라</h3>
+			<h2>(주)호텔신라 VANTT 라운지 식음 판매 모집</h2>	
+		</div>
+		<div class="bottom">
+			<select name="field">
+				<option>지원분야를 선택해주세요<option>
+				<option>전산<option>
+				<option>마케팅<option>
+				<option>전략<option>
+			</select>
+			<h2>지원이력서</h2>
+			<input type="radio" name="resume">이력서	
+			<hr>
+			<input type="button" value="지원하기" name="btn" onclick="submitAct()">
+		</div>
+	</form>
+	
+</body>
+<script type="text/javascript">
+	var btn = document.querySelector("[name=button]");
+	var form = document.querySelector("[name=applyForm]");
+	var field = document.querySelector("select");
+	var rs = document.querySelector("input[type=radio]");
+	function submitAct(){
+		if(field.value=="" || field.value=="지원분야를 선택해주세요"){
+			alert("지원분야를 선택해주세요");
+			return false;
+		} 
+		if(!rs.checked){
+			alert("이력서를 선택해주세요");
+			return false;
+		} else{
+			alert("지원이 완료되었습니다");
+			form.submit();
+			window.close();	
+		}	
+	}
+	
+	
+
+</script>
+</html>

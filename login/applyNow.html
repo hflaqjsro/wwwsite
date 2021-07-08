@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+	html, body {margin:0px; padding:0px; height:100%;font-family:'Source Sans Pro'}
+	a {text-decoration:none;}
+	.header a {color:white}
+	.header{
+		display:flex; 
+		align-items:center; padding:8px 12px;
+		height:150px; background-color:cornflowerblue;
+		
+	}
+	.header input[type=text]{
+		width:300px; height:45px;
+	}
+	.header_logoSrch{
+		display:flex;font-size:30px; list-style:none; margin:0 auto;
+	}
+	.header_logoSrch li{
+		padding:5px;
+	}
+	
+	.header_logoSrch > i{
+		color:bisque;
+	}
+	.header_alarmMypage{
+		display:flex; padding-left:0; font-size:20px; list-style:none;
+	}
+	.header_alarmMypage li {
+		padding:8px 10px; 
+	}
+	.nav {
+		 height:80px; background-color:white; border-bottom:1px solid gray; align-items:center; 
+	}
+	.nav_menu {
+		display:flex; height:100%; list-style:none; margin:0 auto;
+		justify-content:center; 
+	}	
+	.nav_menu li{
+		width:300px; height:100%;
+		border-left:1px solid cornflowerblue;
+		text-align:center;
+		
+	}
+	.nav a {
+		display:inline-block;
+		width:300px; height:100%;
+		
+		color : cornflowerblue;
+		font-size:20px;
+		
+	}
+	.nav a:hover{
+		background-color: cornflowerblue;
+		color:white;
+	}
+	
+	.nav_menu li:last-child{
+		border-right:1px solid cornflowerblue;
+	}
+	
+	
+	.innav {
+		display:flex; align-items:center; list-style:none; 
+		margin:0 auto;
+		justify-content:center; height:50px;
+		margin-top: 30px;  text-align:center;
+	}
+	.innav li {
+		color:cornflowerblue;
+		border:1px solid cornflowerblue;
+		width:200px; height:100%;
+	}
+	.innav a {
+		display:inline-block;
+		width:200px; height:100%;
+		align-items:center; 		
+	}
+	.innav a:hover{
+		color:white;
+		background-color:cornflowerblue;
+	}
+	.container a{
+		color : cornflowerblue;
+	}
+	
+	.container table input[type=button]{
+		width:75px; height:25px;
+		border:1px solid gray;
+		background-color:white;
+		padding:1px;
+	}
+	input[type=button]:hover{
+		cursor:pointer;
+	}
+	#buttonWrap input[type=button]:first-child{
+		width: 100px; height:35px;
+		border:1px solid skyblue;
+		background-color:skyblue;
+		color:white;
+		padding:1px;
+	}
+	#buttonWrap input[type=button]:last-child{
+		width: 100px; height:35px;
+		border:1px solid gray;
+		background-color:white;
+		padding:1px;
+	}
+	table {
+		border:1px solid gray;
+		border-top:3px solid gray;
+		border-collapse : collapse;
+		text-align:left; 
+	}
+	table td:first-child{
+		border-bottom:1px solid gray;
+	}
+	
+	table td:last-child{
+		border-left:1px solid gray;
+		width:300px;
+	}
+	td {
+		padding:10px;
+		margin-top:5px;
+	} 
+	table i{
+		color:orange; font-size:50px; margin:0 auto;  
+	}
+	.footer {width:100%; height:10%; background-color:cornflowerblue;}
+	#tab01 { width:80%; height:200px;}
+	
+</style>
+<script src="https://kit.fontawesome.com/4b6cb1a865.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<form>
+	<header class="header">
+		<ul class="header_logoSrch">
+			<li><a href="#"><i class="fas fa-cubes"></i></a></li>
+			<li><a href="#">WeWillWork</a></li>
+			<li><input type="text"><li>		
+		</ul>
+		<ul class="header_alarmMypage">
+			<li><a href="#"><i class="far fa-bell"></i></a></li>
+			<li><a href="#">마이페이지</a></li>
+		</ul>
+	</header>
+	
+	<nav class="nav">
+		<ul class="nav_menu">
+			<li><a href="#">채용공고</a></li>
+			<li><a href="#">기업정보</a></li>
+			<li><a href="#">커뮤니티</a></li>
+		</ul>
+	</nav>
+	
+	<section class="container">
+		<table id="tab01" align="center">
+			<tr><td colspan="2">
+				<span>기업명</span><input id="like" type="button" value="관심기업">
+				</td>
+				
+				<td><i class="fab fa-amazon"></i></td>
+			</tr>	
+			<tr><td>
+				<h5>지원자격</h5></td>
+				<td>
+				<h5>근무조건</h5></td>
+				<td><h5>기업정보</h5>
+				<input type="button" name="comInfo" value="기업정보">
+				<input type="button" name="openRecruit" value="채용중 공고"></td>
+			</tr>		
+		</table>
+		<Br>
+		<div id="buttonWrap" align="center">
+			<input type="button" name="applyNowBtn" value="즉시지원">
+			<input type="button" name="scrap" value="스크랩">
+		</div>	
+		<br>
+		<ul class="innav">
+			<li><a href="poster.html" target="mainFrame">상세요강</a></li>
+			<li><a href="term.html" target="mainFrame">접수기간</a></li>
+			<li><a href="statistics.html" target="mainFrame">지원자 통계</a></li>
+		</ul>
+		<div id="#main" align="center">
+			<iframe name="mainFrame" src="poster.html" width="80%" height="700"></iframe>
+		</div>
+	</section>
+	<footer class="footer">footer</footer>
+	</form>
+</body>
+<script type="text/javascript">
+	//즉시지원
+	var applyNowBtn = document.querySelector("[name=applyNowBtn]");
+	applyNowBtn.onclick = function(){
+		var win = window.open("apply.html","PopupWin","width=300","height=600");
+	}
+	
+	var Btns = document.querySelectorAll(".innav a");
+
+	
+	
+	
+	
+</script>
+</html>
