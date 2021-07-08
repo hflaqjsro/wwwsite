@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+       
+ 
+
+            * {margin: 0px; padding : 0px; box-sizing: border-box;}
+            .wrap{width : 1260px; margin: 0 auto;}
+            li {list-style: none;}
+            button {background: none; border: none;}
+            a {text-decoration: none; color : #000000;}
+            
+            header {width : 1519px; height:73px;position: relative;}
+            header .wrap{position: relative;}
+            header h1 .main-logo {padding: 20px 25px; color: #2E6FAB;}
+            header h2 a {color: #363E56; position: absolute; top : 20px; left: 80px;}
+            header select {position: absolute; top : 30px; left: 80px;}
+            header ul {position: absolute; top : 25px; right: 30px;}
+            header ul li {
+                float: left;
+                padding: 0px 10px;
+                position: relative;
+            }
+            header ul li::after {
+                content: "|";
+                position: absolute;
+                top : -2px;
+                right : -3px;
+            }
+            header ul li:last-child::after{
+                content: none;
+            }
+            
+            nav {width : 1519px; height:50px; background: #2E6FAB; color: #ffffff; font-weight: bold;
+            position: relative;}
+            nav .wrap {position: relative;}
+            nav a {color: #ffffff;}
+            nav ul:last-child {float : right; } 
+            nav ul li {padding: 13px 10px; float: left;}
+            nav ul li button i {margin: 0px 20px; color: #ffffff;}
+            
+            nav .Main-Search {
+                width: 300px;
+                height: 30px;
+                position: absolute;
+                right: 100px;
+                top : 10px;
+                background-color: #ffffff;
+                border: 1px solid #ffffff;
+                border-radius: 25px;
+            }
+            nav .Main-Search input[type=text] {
+                width: 239px;
+                margin-left: 15px;
+                border: none;
+            }
+            nav .Main-Search input[type=submit] {
+                padding: 5px;
+                border-radius: 15px;
+                background-color : #F1F4F8;
+                border: none;
+            }
+            nav ul .search_nav {
+                padding: 0PX;
+                padding-top: 8px;
+            }
+            nav ul li input[type=button] {
+                margin: 0px;
+                padding: 5px;
+                border-radius: 15px;
+                background-color : #ffffff;
+                border: 3px solid #F1F4F8;
+            }
+            section {width: 1519px; background-color: #F1F4F8; padding: 30px; overflow: hidden; text-align: center;  }
+            
+            .write {margin-left: 400px; margin-top: 20px; background-color: #F6F6F6; text-align: left; border: 0.3px solid #dadada }
+  			
+  			.btn {width:45px; height:23px; 
+				line-height:20px; border:1px #EAEAEA solid;; 
+				margin:3px auto; background-color:#EAEAEA; text-align:center; border-radius: 2px;
+				cursor: pointer; color:#F1F4F8; transition:all 0.9s, color 0.3; color:#0563af;}	
+				
+			.btn2 {width:80px; height:23px; 
+				line-height:20px; border:1px #EAEAEA solid;; 
+				margin:3px auto; background-color:#EAEAEA; text-align:center; border-radius: 2px;
+				cursor: pointer; color:#F1F4F8; transition:all 0.9s, color 0.3; color:#0563af;}	
+  	
+            section article {
+                width: 100%;
+                border-radius: 25px;
+                background-color: #ffffff;
+                padding: 25px;
+            }
+            section article div {
+                width: 25%;
+                height: 250px;
+                padding: 25px;
+                float: left;
+                text-align: center;
+                border-bottom: 3px solid #dadada;
+                border-radius: 25px;
+            }
+            section article div img{
+                width: 200px;
+                height: 100px;
+            }
+            section article div p {
+                padding: 10px;
+                font-size: 13px;
+            }
+
+            
+            footer{
+                height: 150px;
+            }
+            footer p {
+                text-align: center;
+                padding: 25px;
+            }
+            
