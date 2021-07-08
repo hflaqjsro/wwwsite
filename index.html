@@ -144,7 +144,7 @@
                         </button>
                     </li>
                     <li><a href="#">채용하기</a></li>
-                    <li><a href="re/recruit/recruitView.jsp">이력서작성</a></li>
+                    <li><a href="#" onclick="resume(this)">이력서작성</a></li>
                     <li><a href="communitiy/communityMain.html">커뮤니티</a></li>
                 </ul>
                 <div class="Main-Search">
@@ -205,7 +205,7 @@
                     </div>
                     <div>
                         <a hred="#">
-                            <img src="image/woowabros.jpg">
+                            <img src="image/woowabros.jpg.crdownload">
                             <h3>우아한 형제들 채용</h3>
                             <p>우아한 형제들에서 계약직 개발자를 구합니다.</p>
                             <span>D-14</span>
@@ -225,7 +225,9 @@
         
     </body>
     <script>
-        
+        function resume(){
+            location.href="re/resume/writeResume.jsp";
+        }
         
     </script>
 </html>
