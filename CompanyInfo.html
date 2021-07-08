@@ -1,0 +1,439 @@
+    <head lang="ko">
+        <meta charset="utf-8">
+        <title>WWW.MAIN</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+        <style>
+            * {margin: 0px; padding : 0px; box-sizing: border-box;}
+            .wrap{width : 1260px; margin: 0 auto;}
+            li {list-style: none;}
+            button {background: none; border: none;}
+            a {text-decoration: none; color : #000000;}
+            
+            header {width : 1519px; height:73px;position: relative;}
+            header .wrap{position: relative;}
+            header h1 .main-logo {padding: 20px 25px; color: #2E6FAB;}
+            header h2 a {color: #363E56; position: absolute; top : 20px; left: 80px;}
+            header select {position: absolute; top : 30px; left: 80px;}
+            header ul {position: absolute; top : 25px; right: 30px;}
+            header ul li {
+                float: left;
+                padding: 0px 10px;
+                position: relative;
+            }
+            header ul li::after {
+                content: "|";
+                position: absolute;
+                top : -2px;
+                right : -3px;
+            }
+            header ul li:last-child::after{
+                content: none;
+            }
+            
+            nav {width : 1519px; height:50px; background: #2E6FAB; color: #ffffff; font-weight: bold;
+            position: relative;}
+            nav .wrap {position: relative;}
+            nav a {color: #ffffff;}
+            nav ul:last-child {float : right; } 
+            nav ul li {padding: 13px 10px; float: left;}
+            nav ul li button i {margin: 0px 20px; color: #ffffff;}
+            
+            nav .Main-Search {
+                width: 300px;
+                height: 30px;
+                position: absolute;
+                right: 100px;
+                top : 10px;
+                background-color: #ffffff;
+                border: 1px solid #ffffff;
+                border-radius: 25px;
+            }
+            nav ul .search_nav {
+                padding: 0PX;
+                padding-top: 8px;
+            }
+            nav ul li input[type=button] {
+                margin: 0px;
+                padding: 5px;
+                border-radius: 15px;
+                background-color : #ffffff;
+                border: 3px solid #F1F4F8;
+            }
+            nav .Main-Search {
+                width: 300px;
+                height: 30px;
+                position: absolute;
+                right: 100px;
+                top : 10px;
+                background-color: #ffffff;
+                border: 1px solid #ffffff;
+                border-radius: 25px;
+                font-family: 'Noto Sans KR', sans-serif;
+            }
+            nav .Main-Search input[type=text] {
+                width: 220px;
+                margin-left: 10px;
+                border: none;
+                font-family: 'Noto Sans KR', sans-serif;
+            }
+            nav .Main-Search input[type=submit] {
+				width:40px; height:23px; 
+				line-height:12px; border:1px #3399dd solid;; 
+				margin:3px auto; background-color:#66aaff; text-align:center; 
+				cursor: pointer; color:#333; transition:all 0.9s, color 0.3; color:#FFFFFF;
+            }
+
+			nav .Main-Search input[type=submit]:hover{ 
+				box-shadow: 200px 0 0 0 rgba(0,0,0,0.25) inset, 
+				-200px 0 0 0 rgba(0,0,0,0.25) inset; }
+		
+		     #autocomplete {
+		        width:100 px; height:100px; background-color:#FFFFFF; color:#4374D9;
+		        border: "1"; z-index:2; top:-20.7px; display:none; font-size:14px; text-align:left;
+		        overflow:auto;  
+		        font-family: 'Noto Sans KR', sans-serif;
+		     }
+
+            
+            section {
+            	width: 1519px; background-color: #F1F4F8; 
+            	padding: 30px; overflow: hidden;}
+
+			.companyHeader { 
+				font-family: 'Noto Sans KR', sans-serif;}
+			.companyHeader .img { 
+				position:relative; z-index:1;  opacity: 0.5;}
+			.companyHeader .status { 
+				position:absolute; top:185px; left:255px; width:47px; height: 20px; 
+				background-color: #4374D9; border-radius: 2em; color: #fff; line-height: 17px; z-index:2;}
+  			.companyHeader .name { 
+  				position:absolute; top:210px; left:250px; z-index:2; font-size: 30px; font-weight:bold;}
+  			.companyHeader .summary { 
+  				position:absolute; top:220px; left:550px; z-index:2; font-size: 17px; font-weight:bold; color: #4374D9;}
+  			.companyHeader .logo { 
+  				width:110px; height: 110px; background-color:white; 
+  				border-radius: 2em; position:absolute; top:170px; left:130px; z-index:2;}
+  			.companyHeader .logo .img {top:30%; width:110px; z-index:2; }
+  			
+  			table.companyPic .pic {margin: 10px;}
+			table.companyInfo { 
+				box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif; background-color: #ffffff; 
+				border: 1px solid #EAEAEA; height: 360px;}
+			table.companyInfo .title { 
+				font-size: 15px; width: 500px; }
+			table.companyInfo .value { 
+				font-size: 15px; width: 1000px ;color: #333;}
+            
+            
+            
+			table.companyBenefit { 
+				box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif; background-color: #ffffff; 
+				border: 1px solid #EAEAEA;}
+			table.companyBenefit .pic { 
+				width: 300px; }				
+			table.companyBenefit .name { 
+				font-size: 13px; width: 900px; height: 150px ;color: #4374D9;}
+			table.companyBenefit .value { 
+				font-size: 13px; color: #333;}
+
+			table.companyEnvironment {
+				box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif; background-color: #ffffff; 
+				border: 1px solid #EAEAEA; text-align: center; width: 1258px;	
+			}
+				
+			table.companyLocation { 
+				box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif; background-color: #ffffff; 
+				border: 1px solid #EAEAEA;  width: 1258px; padding: 20px }
+            
+            footer{
+                height: 150px;
+            }
+            footer p {
+                text-align: center;
+                padding: 25px;
+            }
+            
+        </style>
+        <script>
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="wrap">
+                <h1>
+                    <i class="main-logo fab fa-wordpress-simple"></i>
+                </h1>
+                <h2>
+                    <a href="../index.html">We Will Work</a>
+                </h2>
+                <!--
+                <select>
+                    <option>채용정보</option>
+                    <option>기업정보</option>
+                    <option>인재검색</option>
+                    <option>검증면접</option>
+                    <option>합격</option>
+                </select>
+                -->
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+            </div>
+        </header>
+        <nav>
+            <div class="wrap">
+                <ul>
+                    <li>
+                        <button>
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </li>
+                    <li><a href="#">채용하기</a></li>
+                    <li><a href="#">이력서작성</a></li>
+                    <li><a href="communityMain.html">커뮤니티</a></li>
+                </ul>
+                <div class="Main-Search">
+			      <input type="text" id="searchKeyword"/><input type="submit" value="검색" >
+			 	  <br>
+			      <div id="autocomplete">
+			      </div>
+                </div>
+                <ul>
+                    <li class="search_nav"> 
+                        <input type="button" value="상세검색" onclick="location.href='http://www.naver.com'" style="cursor:pointer">
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- 공통 헤더 및 네비 여기까지 -->
+        
+        <section>
+			
+            <div class="companyHeader">
+            	<div class="logo">
+            		<img class="img" src="shillainsa.gif" />
+            	</div>
+            	<div class="status">
+            		 채용중
+            	</div>
+                <div class="name">
+                    (주)호텔신라
+                </div>
+                <div class="summary">
+                      	<span class="item1">삼성그룹 계열사</span>
+                        <span class="item2">면세점,관광숙박,외식사업 </span>
+						<span class="item3">업계 1위 </span>
+                </div>
+		        <div class="img">            
+            		<img src="business.png" width=100% height=20%/></img>
+            	</div>
+            </div>
+
+		  
+
+            <div class="wrap">
+            <table class="companyPic">
+            <br>
+            	<tr>
+            		<td class="pic"><img src="stay1.jpg" width=312px; height=150px/></img></td>
+            		<td class="pic"><img src="stay2.jpg" width=312px; height=150px/></img></td>
+            		<td class="pic"><img src="stay3.jpg" width=312px; height=150px/></img></td>
+            		<td class="pic"><img src="stay4.jpg" width=312px; height=150px/></img></td>
+            	</tr>
+            </table>
+          	<br>
+			<h1>I 기업정보</h1>
+            <table class="companyInfo" >
+                    <tr>
+                        <th class="title">산업</th>
+                            <td class="value">호텔업,면세점</td>
+                        <th class="title">사원수</th>
+                            <td class="value">2,293명</td>
+                    </tr>              
+                    <tr>
+                        <th class="title">기업구분</th>
+                            <td class="value">대기업</td>
+                        <th class="title">설립입</th>
+                            <td class="value">1973.05.09 (48년차)</td>
+                    </tr>
+                    <tr>
+                        <th class="title">자본금</th>
+                            <td class="value">2000억원</td>
+                        <th class="title">매출액</th>
+                            <td class="value">2조 8,144억원</td>
+                    </tr>
+                    <tr>
+                        <th class="title">대표자</th>
+                            <td class="value">이부진</td>
+                        <th class="title">주요사업</th>
+                            <td class="value">호텔</td>
+                    </tr> 
+                    <tr>
+                        <th class="title">4대보험</th>
+                            <td class="value">국민연금, 건강보험, 고용보험, 산재보험</td>
+                        <th class="title">홈페이지</th>
+                            <td class="value"><a href="http://www.hotelshilla.net" target="_blank">http://www.hotelshilla.net</a></td>
+                    </tr> 
+                    <tr>
+                        <th class="title">주소</th>
+                            <td class="value">서울 중구 동호로 249 (장충동2가, 신라호텔)</td>
+                    </tr>
+                    <tr>
+                        <th class="title">계열사</th>
+                            <td class="value">
+                            	<ul>
+                                       <li><a href="/company/1474393" target="_blank">스테코(주)</a>
+                                       </li>
+                                       <li><a href="/company/1763986" target="_blank">삼성전자판매(주)</a>
+                                       </li>
+                                       <li><a href="/company/1622515" target="_blank">삼성벤처투자(주)</a>
+                                       </li>
+                                       <li><a href="/company/1491806" target="_blank">삼성전자로지텍(주)</a>
+                                       </li>
+                                </ul> 
+                         </td>
+                   </tr> 
+			</table>
+
+          	<br>
+			<h1>I 근무환경</h1>
+            <table class="companyEnvironment" >
+                    <tr>
+                        <th class="pic"><img src="shillastaydt.gif" width=1000; /></th>
+                    </tr>
+                    <tr>
+                        <th class="pic"><img src="shillastaydt2.gif" width=1000; /></th>
+                    </tr>
+                    <tr>
+                        <th class="pic"><img src="shillastaydt3.gif" width=1000; /></th>
+ 					</tr>
+			</table>
+			
+			<br>
+			<h1>I 복리후생</h1>
+            <table class="companyBenefit" >
+                    <tr>
+                        <th class="pic"><img src="benefit1.png" width=100px; height=80px;/></th>
+                        <td class="name">
+                        	<h3>휴무·휴가·행사</h3>
+                            	<ul class="value">
+                                       <li>· 연차</li>
+                                       <li>· 경조휴가</li>
+                                       <li>· 반차</li>
+                                       <li>· 산전 후 휴가</li>
+                                       <li>· 육아휴직</li>
+                                </ul> 
+                        </td>
+                        <th class="pic"><img src="benefit2.png" width=95px; height=80px;/></th>
+                        <td class="name">
+                        	<h3>보상·수당·지원</h3>
+                            	<ul class="value">
+                                       <li>· 각종 경조금 지원</li>
+                                       <li>· 인센티브제</li>
+                                       <li>· 장기근속자 포상</li>
+                                       <li>· 우수사원 표창/포상</li>
+                                       <li>· 장기근속수당</li>
+                                </ul> 
+                        <th class="pic"><img src="benefit3.png" width=95px; height=80px;/></th>
+                        <td class="name">
+                        	<h3>기타</h3>
+                            	<ul class="value">
+                                       <li>· 통신비 지원</li>
+                                       <li>· 사내식당</li>
+                                       <li>· 기숙사 지원</li>
+                                       <li>· 야간 교통비 지원</li>
+                                </ul> 
+                        </td>
+                    </tr>              
+                     <tr>
+                        <th class="pic"><img src="benefit4.png" width=100px; height=80px;/></th>
+                        <td class="name">
+                        	<h3>상여·포상제도</h3>
+                            	<ul class="value">
+                                       <li>· 상여금제공</li>
+                                       <li>· 우수사원포상</li>
+                                </ul> 
+                        </td>
+                        <th class="pic"><img src="benefit5.png" width=95px; height=80px;/></th>
+                        <td class="name">
+                        	<h3>교육비 지원</h3>
+                            	<ul class="value">
+                                       <li>· 학자금 지원</li>
+                                       <li>· 교육비 지원</li>
+                                       <li>· 선택적 복리후생제도</li>
+                                </ul> 
+                        <th></th>
+                        <td class="name">
+                        	<h3></h3>
+                            	<ul class="value">
+                                </ul> 
+                        </td>
+                    </tr>       
+			</table>
+			<br>
+			<h1>I 근무위치</h1>
+            <table class="companyLocation" >
+                    <tr>
+                        <td>
+                        	<div style="font: 11px, font-family 'Noto Sans KR', dotum, sans-serif;  letter-spacing: -1px; width: 800px; height: 432px; color: rgb(51, 51, 51); position: relative;"><div style="height: 400px;"><a href="https://map.kakao.com/?urlX=501144&amp;urlY=1126786&amp;itemId=14576878&amp;q=%EC%84%9C%EC%9A%B8%EC%8B%A0%EB%9D%BC%ED%98%B8%ED%85%94&amp;srcid=14576878&amp;map_type=TYPE_MAP&amp;from=roughmap" target="_blank"><img class="map" src="http://t1.daumcdn.net/roughmap/imgmap/defb37b1a705adaa496e9330443a1764430c0cd507086f45dcdf59b8576e68bb" width="798" height="398" style="border: 1px solid rgb(204, 204, 204);"></a></div><div style="overflow: hidden; padding: 7px 11px; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 0px 0px 2px 2px; background-color: rgb(249, 249, 249);"><a href="https://map.kakao.com" target="_blank" style="float: left;"><img src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/common/logo_kakaomap.png" width="72" height="16" alt="카카오맵" style="display:block;width:72px;height:16px"></a><div style="float: right; position: relative; top: 1px; font-size: 11px;"><a target="_blank" href="https://map.kakao.com/?from=roughmap&amp;srcid=14576878&amp;confirmid=14576878&amp;q=%EC%84%9C%EC%9A%B8%EC%8B%A0%EB%9D%BC%ED%98%B8%ED%85%94&amp;rv=on" style="float:left;height:15px;padding-top:1px;line-height:15px;color:#000;text-decoration: none;">로드뷰</a><span style="width: 1px;padding: 0;margin: 0 8px 0 9px;height: 11px;vertical-align: top;position: relative;top: 2px;border-left: 1px solid #d0d0d0;float: left;"></span><a target="_blank" href="https://map.kakao.com/?from=roughmap&amp;eName=%EC%84%9C%EC%9A%B8%EC%8B%A0%EB%9D%BC%ED%98%B8%ED%85%94&amp;eX=501144&amp;eY=1126786" style="float:left;height:15px;padding-top:1px;line-height:15px;color:#000;text-decoration: none;">길찾기</a><span style="width: 1px;padding: 0;margin: 0 8px 0 9px;height: 11px;vertical-align: top;position: relative;top: 2px;border-left: 1px solid #d0d0d0;float: left;"></span><a target="_blank" href="https://map.kakao.com?map_type=TYPE_MAP&amp;from=roughmap&amp;srcid=14576878&amp;itemId=14576878&amp;q=%EC%84%9C%EC%9A%B8%EC%8B%A0%EB%9D%BC%ED%98%B8%ED%85%94&amp;urlX=501144&amp;urlY=1126786" style="float:left;height:15px;padding-top:1px;line-height:15px;color:#000;text-decoration: none;">지도 크게 보기</a></div></div></div>			
+                        	<h4>주소  서울 중구 동호로 249 (장충동2가, 신라호텔)</h4>
+                        </td>
+                   </tr>
+			</table>
+			</div>
+        </section>
+        
+        <!-- 공통푸터 -->
+        <footer>
+            <div class="wrap">
+                <p>We Will Work 고객센터 : 02-000-0000</p>
+            </div>
+        </footer>
+        
+    </body>
+<script type="text/javascript">
+	window.onload = function(){ 
+	    var searchKeyword = document.getElementById("searchKeyword");
+	    var autocomplete = document.getElementById("autocomplete");
+	    var keyword = "";
+	
+	    searchKeyword.onkeydown = function(e) {
+	        searchKeyword.onkeyup(e);
+	    };
+	
+	    searchKeyword.onkeyup = function(e){
+	          keyword = searchKeyword.value;
+	       if ( keyword == "" ) {
+	          autocomplete.style.display = "none";
+	       }
+	       else {
+	          autocomplete.style.display = "block";
+	          fillSearchResult(autocomplete);
+	       } 
+	    };
+	 };
+	 
+	 function fillSearchResult(autocomplete) {
+	 
+	    autocomplete.innerHTML = "";
+	    var searchResults = ["삼성전자" , "삼성전기", "삼성로지스틱스", "삼성전자사무직","삼성디스플레이","삼성의료원"];
+	    
+	    for (var i=0; i < searchResults.length; i++) {
+	       autocomplete.innerHTML += "<div onclick='selectData(this);'>" + searchResults[i] + "</div>";
+	    }
+	    
+	 }
+	 function selectData(that) {
+	     var searchKeyword = document.getElementById("searchKeyword");
+	     searchKeyword.value = that.innerText;
+	     
+	     var autocomplete = document.getElementById("autocomplete");
+	     autocomplete.style.display="none";
+	 }
+
+
+
+</script>
+</html>
