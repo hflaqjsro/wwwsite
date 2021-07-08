@@ -1,0 +1,263 @@
+<!DOCTYPE HMTL>
+<html>
+    <head lang="ko">
+        <meta charset="utf-8">
+        <title>커뮤니티 메인페이지</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        <style>
+            * {margin: 0px; padding : 0px; box-sizing: border-box;}
+            .wrap{width : 1260px; margin: 0 auto;}
+            li {list-style: none;}
+            button {background: none; border: none;}
+            a {text-decoration: none; color : #000000;}
+            
+            header {width : 1519px; height:73px;}
+            header .wrap{position: relative;}
+            header h1 .main-logo {padding: 20px 25px; color: #2E6FAB;}
+            header h2 a {color: #363E56; position: absolute; top : 20px; left: 80px;}
+            header select {position: absolute; top : 30px; left: 80px;}
+            header ul {position: absolute; top : 25px; right: 30px;}
+            header ul li {
+                float: left;
+                padding: 0px 10px;
+                position: relative;
+            }
+            header ul li::after {
+                content: "|";
+                position: absolute;
+                top : -2px;
+                right : -3px;
+            }
+            header ul li:last-child::after{
+                content: none;
+            }
+            
+            nav {width : 1519px; height:50px; background: #2E6FAB; color: #ffffff; font-weight: bold;}
+            nav a {color: #ffffff;}
+            nav ul:last-child {float : right; } 
+            nav ul li {padding: 13px 10px; float: left;}
+            nav ul li button i {margin: 0px 20px; color: #ffffff;}
+            
+            section {width: 1519px; background-color: #F1F4F8; padding: 30px; overflow: hidden;}
+            section article {float: left;}
+            section .wrap .main-ad {width: 1259px; height: 272px; background-image: url(../image/main-ad.png) ; margin: 30px 0px}
+            section .main-page {width: 70%;}
+            section .main-page div {padding: 20px 0px; overflow: hidden;}
+            section .main-page .main-con h4 {float: left; padding-right: 20px;}
+            section .main-page .main-con select {float: left; margin: 3px; border: none; background-color: #F1F4F8;}
+            section .main-page .main-con .search-commu {
+                width: 300px; 
+                height: 30px; 
+                padding: 25px;
+                margin-right: 20px;
+                background-color: #ffffff;
+                border-radius: 13px;
+                border: 1px solid #999999;
+                position: relative;
+                box-shadow: 0px 0px 10px #d1d1d1;
+                float: right;
+                
+            }
+            section .main-page .main-con .search-commu .search-commu-input {border: none; background-color: #FFFFFF; position: absolute; left: 10px; top: 8px; padding: 10px;}
+            
+            section .main-page .main-con .search-commu button i {position: absolute; right: 20px; top: 17px;}
+            
+            
+            section .main-page .main-con-post {
+                background-color: #ffffff;
+                padding: 25px;
+                border-radius: 15px;
+                
+            }
+            section .main-page .main-con-post > a {
+                position: relative;
+                z-index: 9;
+            }
+            section .main-page .main-con-post > p {
+                font-size: 12px;
+                padding-bottom: 15px;
+            }
+            section .main-page .main-con-post .post{
+                border-top: 1px solid #999999;
+                position: relative;
+                
+            }
+            section .main-page .main-con-post .post h3 {
+                font-size: 15px;
+                padding: 5px 0px;
+            }
+            section .main-page .main-con-post .post input[type=button] {
+                position: absolute;
+                top : 22px;
+                right: 25px;
+                padding: 2px;
+                z-index: 10;
+            }
+            
+            section .main-page .main-con-post .post h2 {
+                padding-top: 20px;
+                padding-bottom: 5px;
+                font-size: 20px;
+            }
+            section .main-page .main-con-post .post p {
+                padding-top: 15px;
+                padding-bottom: 30px;
+                font-size: 13px;
+            }
+            section .main-page .main-con-post .post > div{
+                padding-top: 10px;
+                padding-bottom: 0px;
+            }
+            section .main-page .main-con-post .post .ul-tag li {
+                margin-right: 10px;
+                padding: 5px 10px;
+                float: left;
+                background-color: #d1d1d1;
+                border-radius: 20px;
+                font-size: 12px;
+            }
+            section .main-page .main-con-post .post .ul-etc li {
+                margin-right: 10px;
+                padding: 5px 10px;
+                float: left;
+                border: 1px solid #999999;
+                border-radius: 5px;
+                font-size: 12px;
+            }
+            
+            
+            aside {width: 30%; float: left; padding: 25px;}
+            
+            
+            footer{
+                width: 1519px;
+                height: 150px;
+            }
+            
+        </style>
+        <script>
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="wrap">
+                <h1>
+                    <a href="communityMain.html">
+                        <i class="main-logo fab fa-wordpress-simple"></i>
+                    </a>
+                </h1>
+                <h2>
+                    <a href="communityMain.html">커뮤니티</a>
+                </h2>
+                <!--
+                <select>
+                    <option>채용정보</option>
+                    <option>기업정보</option>
+                    <option>인재검색</option>
+                    <option>검증면접</option>
+                    <option>합격</option>
+                </select>
+                -->
+                <ul>
+                    <li><a href="../login/mainlogin.html">로그인</a></li>
+                    <li><a href="../login/mainjoin.html">회원가입</a></li>
+                </ul>
+            </div>
+        </header>
+        <nav>
+            <div class="wrap">
+                <ul>
+                    <li>
+                        <button>
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </li>
+                    <li><a href="communitPost.html">질문작성</a></li>
+                    <li><a href="#">MY활동내역</a></li>
+                </ul>
+                <ul>
+                    <li><a href="../Main.html">메인홈으로</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- 공통 헤더 및 네비 여기까지 -->
+        
+        <section>
+            <div class="wrap">
+                <article class="main-ad">
+                </article>
+                <article class="main-page">
+                    <div class="keyword">
+                        <h3>요즘구직자들의 HOT 키워드</h3>
+                    </div>
+                    <div class="main-con">
+                        <h4>전체 1건</h4>
+                        <select>
+                            <option>직종별 보기</option>
+                            <option>경영·사무</option>
+                            <option>영업·고객</option>
+                            <option>생산·제조</option>
+                            <option>IT·인터넷</option>
+                            <option>전문직</option>
+                            <option>교육</option>
+                            <option>미디어</option>
+                            <option>특수계층·공공</option>
+                            <option>건설</option>
+                            <option>유통·무역</option>
+                            <option>서비스</option>
+                            <option>디자인</option>
+                            <option>의료</option>
+                        </select>
+                        <div class="search-commu">
+                            <input class="search-commu-input" type="text" placeholder="다른사람들은 어떤 고민 중일까?">
+                            <button type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="main-con-post">
+                        <p><input type="checkbox"> 전문가 답변질문보기</p>
+                        
+                        <a href="#">
+                            <div class="post">
+                                <h3>모든 회원분들에게</h3>
+                                <input onclick="post_scrap()" type="button" value="스크랩">
+                                <h2>면접이 너무 어려워요</h2>
+                                <p>면접에 들어가면 항상 백지장이 됩니다...</p>
+                                <div class="ul-tag">
+                                    <ul >
+                                        <li><a href="##">#면접준비</a></li>
+                                        <li><a href="##">#취업준비</a></li>
+                                    </ul>
+                                </div>
+                                <div class="ul-etc">
+                                    <ul>
+                                        <li><a href="##">댓글</a></li>
+                                        <li><a href="##">공감</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                        
+                    </div>
+                </article>
+                <aside class="main-aside">
+                    어사이드
+                </aside>
+            </div>
+        </section>
+        <footer>
+        
+        
+        </footer>
+        
+    </body>
+    <script>
+        var scrap = document.querySelector(".post [type=button]");
+        function post_scrap(){
+            scrap.style.backgroundColor="#2E6FAB";
+            scrap.style.color="#ffffff";
+            return false;
+        }
+    </script>
+</html>
