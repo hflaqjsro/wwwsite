@@ -1,0 +1,8 @@
+@charset "UTF-8";
+td:first-child{
+	text-align:center;
+}
+span#required{
+	color:red;
+	font-weight:bold;
+}
